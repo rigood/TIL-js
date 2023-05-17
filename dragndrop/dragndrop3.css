@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard-Regular";
+}
+
+.draggable-elements {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  cursor: move;
+  transition: opacity 0.2s;
+}
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+.droppable-elements {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.droppable {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed lavender;
+}
+
+.droppable span {
+  pointer-events: none;
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  border-width: 4px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped {
+  border: none;
+  color: white;
+}
+
+.droppable.dropped img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.draggable.dragged {
+  opacity: 0.1;
+  cursor: default;
+  user-select: none;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}

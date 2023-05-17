@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="dragndrop3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="dragndrop3.js" defer></script>
+  </head>
+  <body>
+    <section class="draggable-elements">
+      <img
+        src="love.png"
+        draggable="true"
+        class="draggable"
+        id="love"
+        data-color="#6CBDF4"
+      />
+      <img
+        src="seoul.png"
+        draggable="true"
+        class="draggable"
+        id="seoul"
+        data-color="#2D2B50"
+      />
+      <img
+        src="clock.png"
+        draggable="true"
+        class="draggable"
+        id="clock"
+        data-color="#DAF7A6"
+      />
+      <img
+        src="rod.png"
+        draggable="true"
+        class="draggable"
+        id="rod"
+        data-color="#DED2C6"
+      />
+    </section>
+
+    <section class="droppable-elements">
+      <div class="droppable" data-draggable-id="love">
+        <span>사랑 사랑</span>
+      </div>
+      <div class="droppable" data-draggable-id="seoul">
+        <span>서울 가 살자</span>
+      </div>
+      <div class="droppable" data-draggable-id="clock">
+        <span>시계바늘</span>
+      </div>
+      <div class="droppable" data-draggable-id="rod"><span>회초리</span></div>
+    </section>
+  </body>
+</html>
