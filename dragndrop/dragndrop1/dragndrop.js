@@ -7,6 +7,9 @@ boxes.forEach((box) => {
   // When a draggable element dragged over a box element
   box.addEventListener("dragover", (e) => {
     e.preventDefault();
+
+    if (box === img.parentElement) return;
+
     box.classList.add("hovered");
   });
 

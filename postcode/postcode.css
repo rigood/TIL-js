@@ -13,12 +13,14 @@ body {
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-#address {
+section#address {
+  width: 500px;
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
 }
 
 .row {
@@ -31,9 +33,18 @@ h1 {
 input {
   font-size: inherit;
   font-family: inherit;
+  padding: 5px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
 }
 
 button {
   font-size: inherit;
   font-family: inherit;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f74a50;
+  color: white;
+  cursor: pointer;
 }

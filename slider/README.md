@@ -4,6 +4,8 @@
 
 [📙 Tutorial : 바닐라 자바스크립트로 "캐러셀 슬라이더" 만들기](https://youtu.be/l18HCZqBs6I)
 
+<img src="preview.gif" width="200" />
+
 ```javascript
 const SHOWING_CLASS = "showing";
 

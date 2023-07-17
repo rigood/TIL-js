@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+:root {
+  --border: #e4f2fe;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,26 +19,22 @@
 body {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  row-gap: 100px;
   justify-content: center;
   align-items: center;
   font-family: "Pretendard-Regular";
 }
 
 .container {
-  width: 420px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .container .box {
-  position: relative;
   width: 160px;
   height: 160px;
-  border: 8px solid #e4f2fe;
+  border: 8px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -45,8 +45,11 @@ body {
   background-image: url("img.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 0.99;
+  border-radius: 8px;
 }
 
 .box.hovered {
-  border: 8px dashed #e4f2fe;
+  border: 8px dashed var(--border);
+  background-color: skyblue;
 }
