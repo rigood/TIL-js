@@ -2,6 +2,8 @@
 
 [📙 Tutorial : HTML Drag and Drop API](https://youtu.be/7HUCAYMylCQ)
 
+<a href="https://rigood.github.io/TIL-js/dragndrop/dragndrop3/dragndrop3.html">예제 바로가기</a>
+
 <img src="preview.gif"  />
 
 - 드래그 앤 드롭을 통해 노래에 맞는 캐릭터를 연결하는 예제입니다.

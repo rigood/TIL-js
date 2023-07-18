@@ -1,5 +1,7 @@
 ## [📙 Tutorial : How To Build Sortable Drag & Drop With Vanilla Javascript](https://youtu.be/jfYWwQrtzzY)
 
+<a href="https://rigood.github.io/TIL-js/dragndrop/dragndrop2/dragndrop2.html">예제 바로가기</a>
+
 <img src="preview.gif" width="300" />
 
 - 드래그 앤 드롭을 통해 노래를 순서대로 나열하고, 정답을 맞추면 배경색이 변경되는 예제입니다.
