@@ -28,5 +28,9 @@ body {
 #container {
   background-color: pink;
   height: 400px;
-  touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
 }

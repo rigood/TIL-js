@@ -2,7 +2,7 @@
 
 [📙 Tutorial : HTML Drag and Drop API](https://youtu.be/7HUCAYMylCQ)
 
-<a href="https://rigood.github.io/TIL-js/dragndrop/dragndrop3/dragndrop3.html">예제 바로가기</a>
+<a href="https://rigood.github.io/TIL-js/dragndrop/dragndrop3/dragndrop3.html" target="_blank">예제 바로가기</a>
 
 <img src="preview.gif"  />
 

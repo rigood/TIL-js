@@ -1,0 +1,22 @@
+*,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: pink;
+  height: 200px;
+  touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border-radius: 50%;
+}
