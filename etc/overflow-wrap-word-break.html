@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow-wrap, word-break 정리</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h3 {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    div,
+    p {
+      margin: 0 !important;
+      margin-bottom: 20px !important;
+      width: 200px;
+      height: 80px;
+      margin: 20px 0;
+      border: 1px solid black;
+    }
+    /* overflow-wrap 설명 */
+    div.normal {
+      overflow-wrap: normal;
+    }
+    div.break-word {
+      overflow-wrap: break-word;
+    }
+    /* word-break 설명 */
+    p.break-all {
+      word-break: break-all;
+    }
+    p.keep-all {
+      word-break: keep-all;
+    }
+    p.break-word {
+      word-break: break-word;
+    }
+    main {
+      display: flex;
+    }
+  </style>
+  <body>
+    <h1>언어별 강제개행 특징</h1>
+
+    <h3>한국어: 글자 기준으로 강제개행</h3>
+    <div>가나다라마바사아자차카타파하</div>
+
+    <h3>영어: 연속된 문자인 경우 강제개행 안됨</h3>
+    <div>ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz</div>
+
+    <h3>영어: 단어 기준으로 강제개행</h3>
+    <div>apple banana carrot dessert</div>
+
+    <h3>영어: 공백 기준으로 강제개행 (대문자와 소문자 사이에 공백문자 있음)</h3>
+    <div>ABCDEFGHIJKLMNOPQRSTUVWZYZ abcdefghijklmnopqrstuvwxyz</div>
+
+    <h3>영어: 물음표(?), 하이픈(-) 기준으로 강제개행</h3>
+    <div>ABCDEFGHIJKLMNOPQRSTUVWZYZ?abcdefghijklmnopqrstuvwxyz</div>
+    <div>ABCDEFGHIJKLMNOPQRSTUVWZYZ-abcdefghijklmnopqrstuvwxyz</div>
+    <div>ABCDEFGHIJKLMNOPQRSTUVWZYZ@abcdefghijklmnopqrstuvwxyz</div>
+
+    <hr
+      style="width: 100%; height: 2px; background-color: black; border: none"
+    />
+
+    <h1>overflow-wrap</h1>
+
+    <h3>overflow-wrap: normal (언어별 특성에 따라 줄바꿈)</h3>
+    <div class="normal">
+      ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz
+    </div>
+    <div class="normal">가나다라마바사아자차카타파하</div>
+
+    <h3>overflow-wrap: break-word (글자 기준으로 강제개행)</h3>
+    <div class="break-word">
+      ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz
+    </div>
+    <div class="break-word">가나다라마바사아자차카타파하</div>
+
+    <hr
+      style="width: 100%; height: 2px; background-color: black; border: none"
+    />
+    <h1>word-break</h1>
+
+    <h3>word-break: break-all (한국어처럼 글자 기준으로 줄바꿈)</h3>
+    <p class="break-all">
+      ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz
+    </p>
+    <p class="break-all">가나다라마바사아자차카타파하</p>
+
+    <h3>word-break: keep-all (영어처럼 단어 기준으로 줄바꿈)</h3>
+    <p class="keep-all">apple banana carrot dessert</p>
+    <p class="keep-all">ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz</p>
+    <p class="keep-all">가방 나비 다리미 라디오 마술쇼</p>
+    <p class="keep-all">가나다라마바사아자차카타파하</p>
+
+    <h3>
+      word-break: break-word<br />
+      - 평상시에는 언어 특성에 따라 줄바꿈<br />
+      - overflow되면 한국어처럼 글자 기준으로 줄바꿈
+    </h3>
+    <p class="break-word">apple banana carrot dessert</p>
+    <p class="break-word">
+      ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz
+    </p>
+    <p class="break-word">가방 나비 다리미 라디오 마술쇼</p>
+    <p class="break-word">가나다라마바사아자차카타파하</p>
+  </body>
+</html>
