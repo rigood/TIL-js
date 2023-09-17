@@ -1,0 +1,31 @@
+.wrapper {
+  width: 100%;
+  max-width: 480px;
+  margin: 50px auto;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  aspect-ratio: 16 / 9;
+  background: white;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 150ms;
+}
+
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}

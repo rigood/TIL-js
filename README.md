@@ -5,6 +5,7 @@
 - [다음 우편번호 API를 활용한 주소 입력](postcode/README.md)
 - [touch 이벤트 예제](touch/README.md)
 - [pointer 이벤트 2가지 예제](pointer/README.md)
+- [Intersection Observer API 예제](intersectionObserver/README.md)
 
 </br>
 
